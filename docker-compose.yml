@@ -5,7 +5,7 @@ services:
     build:
       context: ./FingergunsApi/FingergunsApi.App
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:5000
     ports:
       - "5000:5000"
@@ -18,3 +18,6 @@ services:
       - "443:443"
     volumes:
       - ./fingerguns-client/nginx/logs/:/var/log/nginx/
+      - /var/www/letsencrypt/:/var/www/letsencrypt/
+      - /etc/letsencrypt/live/fingerguns.co:/etc/letsencrypt/live/fingerguns.co
+      - /etc/letsencrypt/archive/fingerguns.co:/etc/letsencrypt/archive/fingerguns.co
