@@ -1,0 +1,6 @@
+[submodule "fingerguns-client"]
+	path = fingerguns-client
+	url = git@github.com:erik-jenkins/fingerguns-client.git
+[submodule "FingergunsApi"]
+	path = FingergunsApi
+	url = git@github.com:erik-jenkins/FingergunsApi.git
