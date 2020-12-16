@@ -1,0 +1,8 @@
+version: "3.5"
+
+services:
+  client:
+    volumes:
+      - /var/www/letsencrypt/:/var/www/letsencrypt/
+      - /etc/letsencrypt/live/fingerguns.co:/etc/letsencrypt/live/fingerguns.co
+      - /etc/letsencrypt/archive/fingerguns.co:/etc/letsencrypt/archive/fingerguns.co

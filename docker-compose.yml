@@ -13,11 +13,9 @@ services:
   client:
     build:
       context: ./fingerguns-client
+      dockerfile: Dockerfile
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - ./fingerguns-client/nginx/logs/:/var/log/nginx/
-      - /var/www/letsencrypt/:/var/www/letsencrypt/
-      - /etc/letsencrypt/live/fingerguns.co:/etc/letsencrypt/live/fingerguns.co
-      - /etc/letsencrypt/archive/fingerguns.co:/etc/letsencrypt/archive/fingerguns.co
