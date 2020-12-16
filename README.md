@@ -8,7 +8,7 @@
 
 ## Running the webapp
 
-After cloning this project, use `git submodule init` to populate the included submodules.
+After cloning this project, use `git submodule update` to populate the included submodules.
 
 To run locally: `./start-dev.sh`
 
