@@ -1,6 +1,14 @@
 version: "3.5"
 
 services:
+  db:
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - /var/lib/postgresql/data:/var/lib/postgresql/data
+
   client:
     volumes:
       - /var/www/letsencrypt/:/var/www/letsencrypt/

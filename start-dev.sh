@@ -11,4 +11,4 @@ cd ../../FingergunsApi
 cd ..
 
 # run app in development mode
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d $1
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build $1
