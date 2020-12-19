@@ -1,13 +1,12 @@
 version: "3.5"
 
 services:
-  db:
+  mariadb:
     environment:
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
-      - PGDATA=/var/lib/postgresql/data/pgdata
+      - MYSQL_USER
+      - MYSQL_PASSWORD
     volumes:
-      - /var/lib/postgresql/data:/var/lib/postgresql/data
+      - /var/lib/mysql/fingerguns:/var/lib/mysql
 
   client:
     volumes:
