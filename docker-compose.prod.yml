@@ -10,7 +10,7 @@ services:
 
   webapi:
     environment:
-      - ConnectionStrings__FingergunsDatabase="server=mariadb;user=${MYSQL_USER};password=${MYSQL_PASSWORD};database=fingerguns"
+      - ConnectionStrings__FingergunsDatabase=server=mariadb;user=${MYSQL_USER};password="${MYSQL_PASSWORD}";database=fingerguns
 
   client:
     ports:
