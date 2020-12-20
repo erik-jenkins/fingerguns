@@ -8,7 +8,14 @@ services:
     volumes:
       - /var/lib/mysql/fingerguns:/var/lib/mysql
 
+  webapi:
+    environment:
+      - ConnectionStrings__FingergunsDatabase="server=mariadb;user=${MYSQL_USER};password=${MYSQL_PASSWORD};database=fingerguns"
+
   client:
+    ports:
+      - "80:80"
+      - "443:443"
     volumes:
       - /var/www/letsencrypt/:/var/www/letsencrypt/
       - /etc/letsencrypt/live/fingerguns.co:/etc/letsencrypt/live/fingerguns.co

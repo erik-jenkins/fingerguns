@@ -21,8 +21,5 @@ services:
     build:
       context: ./fingerguns-client
       dockerfile: Dockerfile
-    ports:
-      - "80:80"
-      - "443:443"
     volumes:
       - ./fingerguns-client/nginx/logs/:/var/log/nginx/
